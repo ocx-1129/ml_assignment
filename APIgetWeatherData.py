@@ -10,7 +10,7 @@ params = {
     "latitude": lat,
     "longitude": lon,
     "start_date": "2023-01-01",
-    "end_date": "2024-12-31",
+    "end_date": "2025-10-31",
     "hourly": "temperature_2m,relativehumidity_2m,pressure_msl,wind_speed_10m,wind_direction_10m,precipitation",
     "timezone": "UTC"
 }
@@ -25,6 +25,6 @@ df = df.set_index("time")
 # Resample to 30 minutes
 df_30 = df.resample("30min").interpolate()
 
-df_30.to_csv("london_2023_24_halfhour_interp.csv")
+df_30.to_csv("london_2023_25_halfhour_interp.csv")
 
 print(df_30.head())
